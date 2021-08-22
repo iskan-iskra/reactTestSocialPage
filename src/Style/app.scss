@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+*{
+    outline: none;
+    border: none;
+    background:none;
+    user-select: none;
+    padding: 0;
+}
+body{
+    outline: none;
+    margin: 0;
+    margin: auto;
+    background-color: var(--color-Gray_200);
+    max-width: var(--width-maxWidth);
+    min-width: var(--width-minWidth);
+}
+.App{
+    background-color: var(--color-White);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    min-height: 100vh;
+    .AppBody{
+        margin-top: 56px;
+        padding: 0 16px;
+        display: flex;
+        flex-direction: column;
+    }
+}

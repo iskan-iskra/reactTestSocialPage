@@ -1,0 +1,17 @@
+.SelectWraper{
+    .title{
+        margin: 12px 0;
+    }
+    .Selectors{
+        padding-bottom: 16px;
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        &::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+        }
+    }
+}

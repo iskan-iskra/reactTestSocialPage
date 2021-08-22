@@ -1,0 +1,155 @@
+$iconArrowLeftBlack: '../../../Icons/App\ Bar-Title\ Bar-icon-navigation-arrow_back_24px.svg';
+$iconVerticalPointsBlack: '../../../Icons/App\ Bar-icon-navigation-more_vert_24px.svg';
+$iconPlusWhite: '../../../Icons/Round\ Avatars-Vector.svg';
+$iconPlusBlack: '../../../Icons/Flexible-Outline-IconRight-Primary-icon-content-add_24px.svg';
+$iconCrossRed: '../../../Icons/Two-line-3.\ w-icon-navigation-close_24px.svg';
+$iconCrossWhite: '../../../Icons/icon-navigation-close_24px.svg';
+
+
+@mixin increaseAnimation($size){
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: transform .2s linear;
+    &:active{
+        transform: scale($size);
+    }
+}
+@mixin activeChangeColor{
+    transition: background-color .1s linear;
+    &:active{
+        background: #F2E7FE;
+        border: 1px solid var(--color-Violet2);
+        color: var(--color-Violet_500);
+    }
+}
+.back{
+    @include increaseAnimation(1.5);
+    width: 24px;
+    height: 24px;
+    background-size: 100%;
+    background-image: url($iconArrowLeftBlack);
+}
+.menu{
+    @include increaseAnimation(1.5);
+    margin-left: auto;
+    width: 6px;
+    height: 24px;
+    background-size: 100%;
+    background-image: url($iconVerticalPointsBlack);
+}
+.ChangeAvatar{
+    @include increaseAnimation(1.5);
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border: var(--color-White) 2px solid;
+    color: var(--color-White);
+    background-color: var(--color-Violet_500);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    div{
+       width: 12px;
+       height: 12px;
+       background-size: 100%;
+       background-image: url($iconPlusWhite); 
+    }
+}
+.ChangeFont{
+    @include activeChangeColor();
+    padding: 6px 12px;
+    background: var(--color-Gray_200);
+    border-radius: 68px;
+    color: var(--color-Gray2);
+    border: 1px solid var(--color-Gray_200);
+    &+.ChangeFont{
+        margin-left: 10px;
+    }   
+}
+.FriendsAdd{
+    @include increaseAnimation(1.05);
+    border: 1px solid var(--color-Gray3);
+    box-sizing: border-box;
+    border-radius: 4px;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    .text{
+        text-transform: uppercase;
+        margin-right: 13px;
+    }
+    .icon{
+        width: 15px;
+        height: 15px;
+        background-size: 100%;
+        background-image: url($iconPlusBlack);
+    }
+}
+.FriendDelete{
+    @include increaseAnimation(1.5);
+    margin-left: auto;
+    width: 14px;
+    height: 14px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url($iconCrossRed);
+}
+.FriendAdd{
+    @include increaseAnimation(1.5);
+    margin-left: auto;
+    width: 14px;
+    height: 14px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url($iconPlusBlack);
+}
+.PhotoDelete{
+    @include increaseAnimation(1.5);
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid var(--color-White);
+    background-color: var(--color-Red_200);
+    display: none;
+    &.active{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    div{
+        width: 8px;
+        height: 8px;
+        background-size: 100%;
+        background-image: url($iconCrossWhite);
+    }
+}
+.ButtonMedia{
+    text-transform: uppercase;
+    background: var(--color-White);
+    border: 1px solid var(--color-Gray3);
+    box-sizing: border-box;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-Violet_500);
+    width: 156px;
+    height: 36px;
+    &.active{
+        background-color:var(--color-Violet_500);
+        color: var(--color-White);
+    }
+    &:active{
+        background-color:var(--color-Violet_500);
+        color: var(--color-White);
+    }
+}
